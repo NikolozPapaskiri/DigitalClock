@@ -1,19 +1,7 @@
-class User {
-    constructor(firstname, lastname) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-    }
-}
+import * as module from './module.js';
 
-class Student extends User {
-    constructor(firstname, lastname, grade) {
-        super(firstname, lastname);
-        this.grade = grade;
-    }
-}
+module.userName(`Niko`);
 
-const niko = new User('niko', 'papa');
-const test = new Student('niko', 'papa', 23);
+const niko = new module.User(`niko`);
 
-console.log(niko);
-console.log(test);
+console.log(module.user, module.default, module.User);
