@@ -1,5 +1,6 @@
-const numbers = [1, 2, 3, 4, 5, 6, 7];
+const cars = [`Ferrari`, `lamborghini`, `porsche`];
+const trucks = [ `Man`, `Scania`];
 
-const [ a = `no number`, b, c, , ...rest] = numbers;
+const allCars = cars.concat(trucks);
 
-console.log(a);
+console.log(allCars);
