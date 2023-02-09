@@ -1,6 +1,5 @@
 const cars = [`Ferrari`, `lamborghini`, `porsche`];
-const trucks = [ `Man`, `Scania`];
 
-const allCars = cars.concat(trucks);
+let fav = cars.slice(0, 1);
 
-console.log(allCars);
+console.log(fav);
