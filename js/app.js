@@ -1,13 +1,14 @@
-class Car {
-    constructor(brand, model, color) {
-        this.brand = brand;
-        this.model = model;
-        this.color = color;
+class User {
+    constructor(firstname, lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 }
 
-const myCar = new Car(`Subaru`, `Legacy`, `Blsck`);
-const yourCar = new Car(`Mercedes`, `E-class`, `White`);
-
-console.log(yourCar)
-console.log(myCar);
+class Student extends User {
+    constructor(firstname, lastname, grade) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.grade = grade;
+    }
+}
