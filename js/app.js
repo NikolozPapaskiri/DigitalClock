@@ -7,8 +7,13 @@ class User {
 
 class Student extends User {
     constructor(firstname, lastname, grade) {
-        this.firstname = firstname;
-        this.lastname = lastname;
+        super(firstname, lastname);
         this.grade = grade;
     }
 }
+
+const niko = new User('niko', 'papa');
+const test = new Student('niko', 'papa', 23);
+
+console.log(niko);
+console.log(test);
