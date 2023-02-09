@@ -1,7 +1,5 @@
-import * as module from './module.js';
+const numbers = [1, 2, 3, 4, 5, 6, 7];
 
-module.userName(`Niko`);
+const [ a = `no number`, b, c, , ...rest] = numbers;
 
-const niko = new module.User(`niko`);
-
-console.log(module.user, module.default, module.User);
+console.log(a);
