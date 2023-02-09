@@ -1,0 +1,21 @@
+{
+    "firstName": "Niko",
+    "lastName": "Papa",
+    "email": "nkpapaskiri@gmail.com",
+    "age": 21,
+    "'isMarried": true,
+    "isMillionaire": null,
+    "friends" {
+        "hasFriends": true
+    },
+    "jobList": ["servisebi", "myge", "vivarober"],
+    "jobList2": [
+        {
+            "jobDescr": "programmer"
+        },
+        {
+            "jobDescr2": "programmer"
+        }
+    ]
+
+}
