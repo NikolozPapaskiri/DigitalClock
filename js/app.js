@@ -10,4 +10,6 @@ const user = {
 
 // localStorage.clear();
 
-console.log(localStorage.getItem(`user`));
+const uss = localStorage.getItem(`user`);
+console.log(typeof(uss));
+console.log(JSON.parse(uss).firstName);
