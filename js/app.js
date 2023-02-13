@@ -1,24 +1,30 @@
-// const sportCars = [`Ferrari`, `Porsche`, `McLaren`];
-// const familyCars = [`Tpyota`, `Honda`, `audi`];
+console.log(`about to fetch a rainbow`);
 
-// const allCars = [...sportCars, ...familyCars];
+catchRainbow()
+    .then(response => {
+        console.log(`yay`);
+        console.log(response);
+    })
+    .catch(error => {
+        console.log(`error`);
+        console.log(error);
+    });
 
-// console.log(allCars);
-
-const car = {
-    name: `Ferrari`,
-    country: `Italy`
-};
-
-const features = {
-    color: `Red`,
-    type: `Hyper car`
-};
-
-const fullCar = {
-    ...car,
-    ...features,
-    price: 500000
+async function catchRainbow() {
+    const response = fetch(`rainbow.jpg`);
+    const blob = await (await response).blob();
+    document.getElementById('rainbow').src = URL.createObjectURL(blob);
 }
 
-console.log(fullCar);
+// fetch(`rainbow.jpg`).then(response => {
+//     console.log(response);
+//     return response.blob();
+// })
+// .then(blob => {
+//     console.log(blob);
+//     document.getElementById('rainbow').src = URL.createObjectURL(blob);
+// })
+// .catch(error => {
+//     console.log(`error`);
+//     console.log(error);
+// });
