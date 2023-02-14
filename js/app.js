@@ -1,30 +1,29 @@
-console.log(`about to fetch a rainbow`);
-
-catchRainbow()
-    .then(response => {
-        console.log(`yay`);
-        console.log(response);
-    })
-    .catch(error => {
-        console.log(`error`);
-        console.log(error);
-    });
-
-async function catchRainbow() {
-    const response = fetch(`rainbow.jpg`);
-    const blob = await (await response).blob();
-    document.getElementById('rainbow').src = URL.createObjectURL(blob);
+function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
 }
 
-// fetch(`rainbow.jpg`).then(response => {
-//     console.log(response);
-//     return response.blob();
-// })
-// .then(blob => {
-//     console.log(blob);
-//     document.getElementById('rainbow').src = URL.createObjectURL(blob);
-// })
-// .catch(error => {
-//     console.log(`error`);
-//     console.log(error);
-// });
+showTime();
